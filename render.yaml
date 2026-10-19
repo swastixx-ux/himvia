@@ -1,0 +1,10 @@
+services:
+  - type: web
+    runtime: static
+    name: himvia
+    buildCommand: test -f index.html
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
